@@ -12,11 +12,17 @@ In this project you will design and implement a web application that communicate
 
 -The following are the learning goals for this project:
 
-1-The following are the learning goals for this project:
-2-Working with HTML, CSS, and JavaScript
-3-Configuring NPM scripts
-4-Working with event listeners and the Document Object Model
-5-Configuring users and data storage through a back-end service
-6-Working with a back-end service to store data from JavaScript
-7-Designing and implementing a fully functioning web application
-8-(Optionally) using React to simplify building a user interface
+
+1-Working with HTML, CSS, and JavaScript
+
+2-Configuring NPM scripts
+
+3-Working with event listeners and the Document Object Model
+
+4-Configuring users and data storage through a back-end service
+
+5-Working with a back-end service to store data from JavaScript
+
+6-Designing and implementing a fully functioning web application
+
+7-(Optionally) using React to simplify building a user interface
