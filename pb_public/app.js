@@ -9,5 +9,5 @@ root.render(
   /* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null))
 );
 function App() {
-  return /* @__PURE__ */ React.createElement("div", { className: "App" }, /* @__PURE__ */ React.createElement("h2", { class: "text-blue-300" }, "welcome"));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null);
 }

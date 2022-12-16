@@ -1,3 +1,4 @@
+
 import PocketBase from 'https://unpkg.com/pocketbase@0.8.3/dist/pocketbase.es.mjs'
 
 const USERNAME = 'moali5@csu.fullerton.edu'
@@ -18,9 +19,10 @@ root.render(
 
 function App () {
   return (
-    <div className='App'>
-      
-      <h2 class="text-blue-300">welcome</h2>
-    </div>
+
+    <>
+
+    </>
+
   )
 }

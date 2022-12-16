@@ -1,5 +1,60 @@
 
 
+
+
+
+
+
+
 body {
     background-color: rgb(77, 105, 122);
+}
+
+
+#mySidenav a {
+  position: absolute;
+  left: -150px;
+  transition: 0.3s;
+  padding: 25px;
+  width: 230px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#home {
+  top: 100px;
+  background-color: #04AA6D;
+}
+
+#login {
+  top: 200px;
+  background-color: #2196F3;
+}
+
+#reset {
+  top: 300px;
+  background-color: #f44336;
+}
+
+#forget {
+  top: 400px;
+  background-color: #555
+}
+
+
+#signup {
+  top: 500px;
+  background-color: #700b17
+}
+
+
+#chcolor {
+  top: 600px;
+  background-color: #120406
 }

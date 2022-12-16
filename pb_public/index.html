@@ -6,20 +6,445 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="my.css">
+
     <script defer type="module" crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script defer type="module" crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script defer type="module" crossorigin src="https://unpkg.com/pocketbase@0.8.1/dist/pocketbase.umd.js"></script>
-    <script type="module" src="app.js"></script>
+    <!--<script type="module" src="app.js"></script>-->
+    <script src="slideover.js"></script>
+    <script type="module" src="my.js"></script>
+
 </head>
 
 
-<body>
-    <div id="root"></div>
+<body class"RPPic">
+
+    <header>
+
+
+
+
+        <!--beginning of nav bar-->
+        <nav class="sticky flex p-2 top-0 bg-gradient-to-r from-[#614385] to-[#516395]">
+    <div class="flex items-center p-2 gap-2">
+      <img src="./1.png" width="45">
+      <div class="font-bold text-2xl">
+        <span class="text-stone-500">company</span><span class="text-neutral-200">Name </span><span class="text-lime-500">Here</span>
+      </div>
+    </div>
+    <!--=======================================container holding clickable events on right======================================================== -->
+    <div class="flex-1 flex items-center justify-end">
+      <div onclick="toggleSlideover()" class="relative flex h-full item-center p-4 cursor-pointer font-bold
+                                              text-[#70A9A1] hover:bg-[#8889A2] border-[#D2D2CA] rounded">Employee Bio</div>
+      <div onclick="toggleSlideoverR()" class="relative flex h-full item-center p-4 cursor-pointer font-bold
+                                              text-[#70A9A1] hover:bg-[#8889A2] border-[#D2D2CA] rounded">About Us</div>
+      <!--======================================= end of container holding clickable events on right======================================================== -->
+    </div>
+  </nav>
+        <!--end of nav bar-->
+
+
+
+
+
+
+
+
+<!--end of beginning left slide-->
+        <div id="slideover-container" class="fixed inset-0 w-full h-full invisible">
+
+            <div onclick="toggleSlideover()" id="slideover-bg" class="absolute duration-500 ease-out
+                                          transition-all w-full h-full bg-gray-900 opacity-0"></div>
+
+            <div onclick="toggleSlideover()" id="slideover" class="overflow-auto flex flex-col left-0 top-0
+                                            fixed duration-1000 ease-out transition-all w-1/2 h-full bg-slate-200
+                                             -translate-x-full pb-10">
+
+              <!--company BIO-->
+              <div Class="mx-auto flex w-100 h-96 bg-indigo-500 shadow-lg shadow-indigo-500 p-3 rounded-md m-7">
+                <img src="/1.png" width="350"alt="Company logo"> </div>
+
+              <div class="mx-20 item rounded-xl shadow-lg bg-violet-300 text-xl text-black text-center border-double p-5">
+                <h2>Mohammed ali, bio and Job description goes here</h2></div><br>
+
+
+              <div class="mx-20 item rounded-xl shadow-lg bg-violet-300 text-xl text-black text-center border-double p-5">
+                <h2>Christina Agu, bio and Job description goes here</h2></div><br>
+
+
+            <div class="mx-20 my-12 item rounded-xl shadow-lg bg-violet-400 text-xl text-black text-center p-5">
+                <h2>Jacky Cai, bio and Job description goes here</h2></div><br>
+
+
+             <div class="mx-20 item rounded-xl shadow-lg bg-violet-500 text-xl text-black text-center p-5">
+                <h2>Kevin La, bio and Job description goes here</h2></div>
+
+
+
+               <div class="absolute cursor-pointer text-gray-600 top-0 w-8 h-8 flex items-center
+                              justify-center right-0 mt-5 mr-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              </div>
+              <!--end of how to play-->
+            </div>
+
+
+  </div>
+  <!--end of Leftside container-->
+
+
+
+
+
+
+<!--======================================about page===========================================-->
+
+
+ <!--beginning slideover right-->
+ <div id="slideover-containerR" class="w-full h-full fixed inset-0 invisible">
+
+             <div onclick="toggleSlideoverR()" id="slideover-bgR" class="w-full h-full duration-500 ease-out
+                     transition-all inset-0 absolute bg-gray-900 opacity-0"></div>
+
+
+
+
+    <div onclick="toggleSlideoverR()" id="slideoverR" class="w-1/2 bg-slate-200 h-full absolute right-0
+            duration-300 ease-out transition-all translate-x-full">
+
+
+
+      <!--about us-->
+      <div class="flex flex-wrap justify-center items-end space-x-10 space-y-10 h-auto w-auto">
+
+        <!---1-->
+<div class="flex flex-col justify-evenly item space-y-10">
+
+        <div class="box row-start-1 row-end-1 col-start-1 flex flex-col items-center justify-center
+                    p-4  transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110
+                    hover:bg-indigo-400 duration-300 text-white bg-cyan-500/50 shadow-lg
+                    shadow-violet-300/50 rounded-lg item w-96 h-96">
+
+            <div class="inline-flex shadow-lg border border-slate-500 rounded-full overflow-hidden h-40 w-40">
+              <img src="/w.png" alt="#" class="h-full w-full">
+            </div>
+
+
+          <h2 class="mt-4 font-bold text-xl">Mohammed Ali</h2>
+          <h6 class="mt-2 text-sm font-medium">Developer</h6>
+
+          <p class="text-xs text-gray-500 text-center mt-3">
+            -Contributed in designing<br>
+                    &nbsp;&nbsp; layout wireframing<br>
+                  -Contributed in coding<br>
+                    &nbsp;&nbsp; HTML/CSS page.<br>
+                  -Contributed implementing<br>
+                    &nbsp;&nbsp; the JS CODE<br>
+          </p>
+      </div>
+
+
+        <!---2-->
+
+
+        <div class="box row-start-2 row-end-2 col-start-2 flex flex-col items-center justify-center p-4
+                     transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110
+                     hover:bg-indigo-400 duration-300 text-white bg-cyan-500/50 shadow-lg shadow-violet-300/50 rounded-lg item w-96 h-96">
+
+              <div class=" object-cover inline-flex shadow-lg border border-slate-500 rounded-full overflow-hidden h-40 w-40">
+                <img src="/w.png" alt="#"   class="h-full w-full"></div>
+
+
+
+                <h2 class="mt-4 font-bold text-xl">Christina Agu</h2>
+                <h6 class="mt-2 text-sm font-medium">Developer</h6>
+
+                <p class="text-xs text-gray-500 text-center mt-3">
+                  Your contribution goes here
+                </p>
+
+        </div>
+</div>
+
+        <!---3-->
+
+<div class="flex flex-col justify-evenly space-y-10">
+        <div class="box row-start-1 row-end-1 col-start-3 col-end-3 flex flex-col items-center justify-center p-4
+                      transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110
+                hover:bg-indigo-400 duration-300 text-white bg-cyan-500/50 shadow-lg shadow-violet-300/50 rounded-lg item w-96 h-96">
+
+          <div class="inline-flex shadow-lg border border-slate-500 rounded-full overflow-hidden h-40 w-40">
+            <img src="/w.png" alt="#" class="h-full w-full"></div>
+
+
+              <h2 class="mt-4 font-bold text-xl">Jacky Cai</h2>
+              <h6 class="mt-2 text-sm font-medium">Developer</h6>
+
+              <p class="text-sm text-white">
+                Your contribution goes here
+              </p>
+
+        </div>
+
+
+       <!---4-->
+
+        <div class="box row-start-1 row-end-1 col-start-3 col-end-3 flex flex-col items-center
+               justify-center p-4  transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110
+               hover:bg-indigo-400 duration-300 text-white bg-cyan-500/50 shadow-lg shadow-violet-300/50 rounded-lg item w-96 h-96">
+
+             <div class="inline-flex shadow-lg border border-slate-500 rounded-full overflow-hidden h-40 w-40">
+                <img src="/w.png" alt="" class="h-full w-full"></div>
+
+                <h2 class="mt-4 font-bold text-xl">Kevin La</h2>
+                <h6 class="mt-2 text-sm font-medium">Developer</h6>
+
+                <p class="text-sm text-white">
+                  Your contribution goes here
+                </p>
+        </div>
+</div>
+
+     </div>
+ <!-- end of about us-->
+
+
+      <!--X logo for slides-->
+        <div class="absolute cursor-pointer text-gray-600 top-0 w-8 h-8 flex items-center justify-center right-0 mt-5 mr-5">
+
+          <svg class="w-6 h-6"
+               fill="none"
+               stroke="currentColor"
+               viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+
+               <path stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M6 18L18 6M6 6l12 12">
+                </path>
+          </svg>
+
+        </div>
+        <!--end of X logo for slide-->
+
+    </div>
+ </div>
+
+  <!--endofslideoverright-->
+
+
+    </header>
+
+    <hr class="border-8 border-gray-900">
+
+   <!--===========================================end of header=============================================-->
+
+
+
+
+<!--===========================================================-main===========================================-->
+  <main>
+
+
+
+  <div id="mySidenav" class="sidenav">
+
+      <a href="#" id="home">Home</a>
+      <a href="#" id="login" >Sign In</a>
+      <a href="#" id="reset">Forget Pass</a>
+      <a href="#" id="forget">Reset Pass</a>
+      <a href="#" id="signup">SignUp</a>
+      <a href="#" id="chcolor">Change Color</a>
+
+
+  </div>
+
+
+<!----------------------------------------------------------------------------------------------->
+<div class="flex flex-wrap justify-evenly items-center space-x-10 space-y-10">
+        <div class="flex flex-col">
+
+              <div>
+
+
+                <p class="font-sans text-center font-mono text-xl">
+                  The Principia deals primarily with massive<br> bodies in motion, initially <br>
+                under a variety of conditions and hypothetical<br> laws of force in both non-resisting <br>
+                and resisting media, thus offering criteria to<br> decide, by observations, which laws of <br>
+                force are operating in phenomena that may be <br>observed. It attempts to cover hypothetical<br>
+                 or possible motions both of celestial bodies <br>and of terrestrial projectiles. It explores<br>
+                  difficult problems of motions perturbed by<br> multiple attractive forces. Its third and final<br>
+                   book deals with the interpretation of observations <br>about the movements of planets and their satellites. </p></div>
+
+       </div>
+
+
+<div>
+      <div id="pic">
+         <img src="1.png" width="800" height="800" class="border">
+      </div>
+
+
+
+<!----------------------------------------------------------------------------------------------->
+
+    <div id="forgett" class="hidden">
+
+        <form action="" method="post">
+
+        <h1 class="container mx-auto text-white text-xl text-center bg-indigo-500 shadow-lg shadow-indigo-500 p-3 rounded-md m-4">
+          Forget password
+        </h1>
+
+        <div class="flex flex-col items-center space-y-6 border-8">
+
+          <label for="email" class="text-xl h-1">Email</label>
+          <input type="email" name="email" placeholder="Email" required class="text-xl h-5 p-6">
+
+          <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+        </div>
+      </form>
+    </div>
+
+<!----------------------------------------------------------------------------------------------->
+
+
+
+
+    <div id="resett" class="hidden container flex flex-col">
+
+      <form action="/user/forgot" method="post">
+
+        <h1 class="container mx-auto text-white text-xl text-center bg-indigo-500 shadow-lg shadow-indigo-500 p-3 m-4">
+          Reset Password
+        </h1>
+        <div class="flex flex-col items-center space-y-6 border-8">
+        <label for="token" class="text-xl h-1">Email</label>
+        <input type="text" name="token" placeholder="Token" required class="text-xl h-5 p-6">
+
+        <label for="password" class="text-xl h-1">Password</label>
+        <input type="password" name="password" placeholder="Enter Password" required class="text-xl h-5 p-6">
+
+        <label for="Passwrod-repeat" class="text-xl h-1">Repeat Password</label>
+        <input type="password" placeholder="Confirm Password" name="Confirm password" class="text-xl h-5 p-6">
+
+          <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+
+        </div>
+      </form>
+
+    </div>
+
+
+<!----------------------------------------------------------------------------------------------->
+
+
+
+
+    <div id="signupp" class="hidden">
+
+      <form action="/user/signup" method="post">
+        <h1 class="container mx-auto text-white text-xl text-center bg-indigo-500 shadow-lg shadow-indigo-500 p-3 m-4">
+          Sign Up
+        </h1>
+        <div class="flex flex-col items-center space-y-6 border-8">
+
+          <label for="username" class="text-xl h-1">Username</label>
+          <input type="text" name="username" placeholder="Username" required class="text-xl h-5 p-6">
+
+          <label for="email" class="text-xl h-1">Email</label>
+          <input type="email" name="email" placeholder="Email" required class="text-xl h-5 p-6">
+
+          <label for="password" class="text-xl h-1">Password</label>
+          <input type="password" name="password" placeholder="Enter Password" required class="text-xl h-5 p-6">
+
+          <label for="Confirm Password" class="text-xl h-1">Repeat Password</label>
+          <input type="password" placeholder="Confirm Password" name="Confirm-password" class="text-xl h-5 p-6">
+
+
+          <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+
+        </div>
+      </form>
+    </div>
+
+<!----------------------------------------------------------------------------------------------->
+
+
+
+
+    <div id="loginn" class="hidden border-8 shadow-lg">
+
+
+               <form action="/user/login" method="post" class="flex flex-col ">
+               <h1 class="container mx-auto text-white text-xl text-center bg-indigo-500 shadow-lg
+                              shadow-indigo-500 p-5 rounded-md m-4">Log In</h1>
+
+            <input type="text" name="username" placeholder="Username" class="border-4 p-5 shadow-lg">
+            <input type="password" name="password" placeholder="Password" class="border-4 p-5 shadow-lg">
+
+            <button type="submit" class="transition ease-in-out delay-150 duration-300 text-white bg-cyan-500
+                                 shadow-lg shadow-cyan-500/50 rounded-md hover:-translate-y-1 hover:scale-110
+                                   hover:bg-indigo-500 text-center p-5 m-4">Submit</button>
+
+
+
+      </form>
+    </div>
+
+  <!----------------------------------------------------------------------------------------------->
+  </div>
+</div>
+
+
+
+
+<!-------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<div id="root"></div>-->
+
+   </main>
+
+
+<!--=========================================================end of-main===========================================-->
+<hr class="border-8 border-gray-900">
+<!--===========================================================-footer ===========================================-->
+
+
+
+
+
+
+
+
+<!--===========================================================-end of footer ===========================================-->
 </body>
 
 
 
-
-   
 
 </html>
